@@ -1,0 +1,31 @@
+{
+  "name": "valaxy-theme-novel",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.4.1",
+  "author": {
+    "email": "me@yunyoujun.cn",
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "homepage": "https://novel.valaxy.site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YunYouJun/valaxy-theme-novel"
+  },
+  "keywords": [
+    "valaxy",
+    "theme",
+    "novel",
+    "vue"
+  ],
+  "main": "client/index.ts",
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "@iconify-json/ant-design": "^1.2.5",
+    "@iconify-json/simple-icons": "^1.2.25"
+  },
+  "devDependencies": {
+    "valaxy": "^0.22.10"
+  }
+}

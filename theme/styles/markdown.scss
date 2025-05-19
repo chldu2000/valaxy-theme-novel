@@ -1,0 +1,129 @@
+@use 'valaxy/client/styles/mixins/index.scss' as *;
+
+@use 'valaxy/client/styles/components/code.scss' as *;
+@use 'valaxy/client/styles/components/code-group.scss' as *;
+@use 'valaxy/client/styles/components/custom-block.scss' as *;
+
+@use 'sass:color' as color;
+
+@use './novel-vars.scss' as *;
+@use './solar-vars.scss' as *;
+
+.markdown-body {
+  --c-toc-link: var('--nv-c-brand');
+  background-color: $bg-light; // 纸质背景色
+  color: $text-light; // 文字颜色
+  padding-top: 0.5rem;
+  word-wrap: break-word;
+  line-height: 1.8; // 更适合阅读的行高
+  font-size: 1.05rem; // 适中字体大小
+  font-family: var(--va-font-family-base), "Georgia", serif; // 增加衬线字体备用
+  max-width: 760px; // 控制最大宽度以提升可读性
+  margin: 0 auto; // 居中显示
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--va-font-family-base), "Georgia", serif;
+    font-weight: 900;
+    color: color.adjust($text-light, $lightness: -10%); // 更深一点的标题色
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    li > p {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    margin: 16px 0;
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+    padding-left: 12px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: color.adjust($text-light, $alpha: -0.3); // 稍微淡一些
+    }
+  }
+
+  pre > code {
+    display: block;
+    padding: 16px;
+    color: $solar-base01;
+    background-color: $solar-base3;
+    font-family: Consolas, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-radius: 6px;
+    overflow-x: auto;
+
+    // 移除默认伪元素（如反引号）
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  code:not(pre > code) {
+    color: color.adjust($text-light, $lightness: +15%);
+    background-color: color.adjust($bg-light, $lightness: -5%);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: Consolas, monospace;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  // checkbox
+  input[type="checkbox"] {
+    &:checked {
+      background-color: $solar-blue;
+    }
+  }
+}
+
+html.dark {
+  .markdown-body {
+    background-color: $bg-dark;
+    color: $text-dark;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: color.adjust($text-dark, $lightness: -10%);
+    }
+    blockquote {
+      border-left: 4px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.03);
+
+      p {
+        color: color.adjust($text-dark, $alpha: 0.3);
+      }
+    }
+
+    pre > code {
+      color: $solar-base1;
+      background-color: $solar-base03;
+    }
+
+    code:not(pre > code) {
+      color: color.adjust($text-dark, $lightness: +15%);
+      background-color: color.adjust($bg-dark, $lightness: -5%);
+    }
+  }
+}
