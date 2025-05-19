@@ -15,7 +15,7 @@ const themeConfig = useThemeConfig()
 </script>
 
 <template>
-  <nav w="full" class="flex items-center justify-between py-10 font-bold">
+  <nav w="full" class="flex items-center justify-between py-4 font-bold">
     <RouterLink class="text-xl" to="/" :aria-label="siteConfig.title">
       <img
         class="mr-2 inline-block"
@@ -30,10 +30,16 @@ const themeConfig = useThemeConfig()
         <AppLink
           :to="item.link"
           rel="noopener"
+          class="inline-flex items-center"
         >
-          {{ item.text }}
+          <span
+            v-if="item.icon"
+            class="inline-flex items-center justify-center"
+            :class="[item.icon]"
+          />
+          <span v-else>{{ item.text || '' }}</span>
         </AppLink>
-        <span v-if="i !== themeConfig.nav.length - 1" class="ml-2 mr-2">·</span>
+        <span v-if="i !== themeConfig.nav.length - 1" class="ml-2 mr-2">/</span>
       </template>
     </div>
 

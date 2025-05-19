@@ -17,7 +17,7 @@ export const defaultThemeConfig: ThemeConfig = {
   footer: {
     since: 2020,
     icon: {
-      name: 'i-ri-cloud-line',
+      name: 'i-ri-book-open-line',
       animated: true,
       color: 'var(--nv-c-brand)',
       url: 'https://sponsors.yunyoujun.cn',
