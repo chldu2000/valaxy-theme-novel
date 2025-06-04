@@ -10,27 +10,27 @@ export default defineConfig<ThemeConfig>({
 
   themeConfig: {
     // colors: {
-    //   primary: 'red',
+    //   primary: '${nv-c-brand}',
     // },
 
     nav: [
       {
         text: 'GitHub',
         link: 'https://github.com/chldu2000/valaxy-theme-novel',
-        // icon: 'i-ri-github-line',
+        icon: 'i-ri-github-line',
       },
       {
         text: 'RSS',
         link: 'https://novel.valaxy.site/atom.xml',
-        // icon: 'i-ri-rss-line',
+        icon: 'i-ri-rss-line',
       },
-      // {
-      //   text: 'Discord',
-      //   link: 'https://discord.gg/sGe4U4p4CK',
-      // },
       {
-        text: 'Valaxy →',
-        link: 'https://github.com/YunYouJun/valaxy',
+        text: 'Discord',
+        link: 'https://discord.gg/sGe4U4p4CK',
+      },
+      {
+        text: 'Valaxy',
+        link: 'https://valaxy.site',
       },
     ],
 

@@ -17,7 +17,7 @@
   word-wrap: break-word;
   line-height: 1.8; // 更适合阅读的行高
   font-size: 1.05rem; // 适中字体大小
-  font-family: var(--va-font-family-base), "Georgia", serif; // 增加衬线字体备用
+  font-family: var(--va-font-family-base), 'Georgia', serif; // 增加衬线字体备用
   max-width: 760px; // 控制最大宽度以提升可读性
   margin: 0 auto; // 居中显示
 
@@ -27,7 +27,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--va-font-family-base), "Georgia", serif;
+    font-family: 'Noto Serif SC', serif, var(--va-font-family-base);
     font-weight: 900;
     color: color.adjust($text-light, $lightness: -10%); // 更深一点的标题色
     margin-top: 1.5em;
@@ -87,7 +87,7 @@
   }
 
   // checkbox
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     &:checked {
       background-color: $solar-blue;
     }

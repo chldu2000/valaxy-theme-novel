@@ -24,8 +24,9 @@ onUpdated(() => {
   <div class="antialiased">
     <!-- 固定定位的导航栏 -->
     <div
+      id="noval-nav"
       ref="navBar"
-      class="fixed left-0 right-0 top-0 z-50 backdrop-blur-xl"
+      class="fixed left-0 right-0 top-0 z-50 border-b-4 border-dotted"
     >
       <div class="mx-auto max-w-3xl px-4 xl:max-w-5xl sm:px-6 xl:px-0">
         <NovelNav />
@@ -78,3 +79,10 @@ onUpdated(() => {
     </NovelFooter>
   </div>
 </template>
+
+<style scoped>
+#noval-nav {
+  background-color: var(--nv-c-bg);
+  border-color: var(--nv-c-text);
+}
+</style>

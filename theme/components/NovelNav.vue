@@ -17,35 +17,31 @@ const themeConfig = useThemeConfig()
 <template>
   <nav w="full" class="flex items-center justify-between py-4 font-bold">
     <RouterLink class="text-xl" to="/" :aria-label="siteConfig.title">
-      <img
-        class="mr-2 inline-block"
-        style="width: 50px; height: 35px"
-        alt="logo"
-        :src="siteConfig.favicon"
-      >
-      <span class="hidden md:inline">{{ siteConfig.title }}</span>
+      <img class="mr-2 inline-block" style="width: 50px; height: 35px" alt="logo" :src="siteConfig.favicon">
+      <span class="nv-title font-bold md:inline">{{ siteConfig.title }}</span>
     </RouterLink>
-    <div class="text-sm text-gray-500 leading-5">
-      <template v-for="(item, i) in themeConfig.nav" :key="i">
-        <AppLink
-          :to="item.link"
-          rel="noopener"
-          class="inline-flex items-center"
-        >
-          <span
-            v-if="item.icon"
-            class="inline-flex items-center justify-center"
-            :class="[item.icon]"
-          />
-          <span v-else>{{ item.text || '' }}</span>
-        </AppLink>
-        <span v-if="i !== themeConfig.nav.length - 1" class="ml-2 mr-2">/</span>
-      </template>
-    </div>
 
-    <button type="button" aria-label="Toggle Dark Mode" @click="appStore.toggleDarkWithTransition">
-      <div v-if="!appStore.isDark" i-ri-sun-line />
-      <div v-else i-ri-moon-line />
-    </button>
+    <div class="flex space-x-8">
+      <div>
+        <template v-for="(item, i) in themeConfig.nav" :key="i">
+          <AppLink v-if="!item.icon" :to="item.link" rel="noopener">
+            <span>{{ item.text || '' }}</span>
+          </AppLink>
+          <span v-if="i !== themeConfig.nav.length - 1 && !item.icon" class="ml-2 mr-2">/</span>
+        </template>
+      </div>
+
+      <div class="mt-1 space-x-2">
+        <template v-for="(item, i) in themeConfig.nav" :key="i">
+          <AppLink v-if="item.icon" :to="item.link" rel="noopener" class="inline-flex">
+            <icon :class="[item.icon]" />
+          </AppLink>
+        </template>
+      </div>
+      <button type="button" aria-label="Toggle Dark Mode" @click="appStore.toggleDarkWithTransition">
+        <div v-if="!appStore.isDark" i-ri-sun-line />
+        <div v-else i-ri-moon-line />
+      </button>
+    </div>
   </nav>
 </template>

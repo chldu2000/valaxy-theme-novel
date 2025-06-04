@@ -3,6 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Valaxy Theme Novel',
+  subtitle: 'Valaxy Theme Novel Preview',
   url: 'https://novel.valaxy.site/',
   favicon: 'https://afool.top/afool.svg',
   author: {
@@ -92,6 +93,6 @@ export default defineSiteConfig({
   ],
 
   comment: {
-    enable: false,
+    enable: true,
   },
 })
