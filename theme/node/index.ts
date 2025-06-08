@@ -1,6 +1,6 @@
+import type { ThemeConfig } from 'types'
 import type { ResolvedValaxyOptions } from 'valaxy'
 import type { Plugin } from 'vite'
-import type { ThemeConfig } from '../types'
 
 /**
  * Default Config
@@ -32,7 +32,11 @@ export const defaultThemeConfig: ThemeConfig = {
     },
   },
 
-  nav: [],
+  nav: {
+    showIcon: true,
+    showTitle: true,
+    items: [],
+  },
 }
 
 // write a vite plugin

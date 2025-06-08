@@ -1,10 +1,9 @@
 import type { DefaultTheme } from 'valaxy'
 
-export namespace StarterTheme {
+export namespace NovelTheme {
   export type Config = ThemeConfig
   export type Sidebar = any
 }
-
 /**
  * Theme Config
  */
@@ -63,7 +62,11 @@ export interface ThemeConfig extends DefaultTheme.Config {
   /**
    * navbar
    */
-  nav: NavItem[]
+  nav: {
+    showIcon: boolean
+    showTitle: boolean
+    items: NavItem[]
+  }
 }
 
 export interface NavItem {

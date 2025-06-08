@@ -13,26 +13,30 @@ export default defineConfig<ThemeConfig>({
     //   primary: '${nv-c-brand}',
     // },
 
-    nav: [
-      {
-        text: 'GitHub',
-        link: 'https://github.com/chldu2000/valaxy-theme-novel',
-        icon: 'i-ri-github-line',
-      },
-      {
-        text: 'RSS',
-        link: 'https://novel.valaxy.site/atom.xml',
-        icon: 'i-ri-rss-line',
-      },
-      {
-        text: 'Discord',
-        link: 'https://discord.gg/sGe4U4p4CK',
-      },
-      {
-        text: 'Valaxy',
-        link: 'https://valaxy.site',
-      },
-    ],
+    nav: {
+      showIcon: true,
+      showTitle: true,
+      items: [
+        {
+          text: 'GitHub',
+          link: 'https://github.com/chldu2000/valaxy-theme-novel',
+          icon: 'i-ri-github-line',
+        },
+        {
+          text: 'RSS',
+          link: 'https://novel.valaxy.site/atom.xml',
+          icon: 'i-ri-rss-line',
+        },
+        // {
+        //   text: 'Discord',
+        //   link: 'https://discord.gg/sGe4U4p4CK',
+        // },
+        {
+          text: 'Valaxy',
+          link: 'https://valaxy.site',
+        },
+      ],
+    },
 
     footer: {
       since: 2020,

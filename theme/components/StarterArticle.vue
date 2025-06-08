@@ -19,10 +19,10 @@ const prevPost = computed(() => posts.value[findCurrentIndex() + 1])
 
 <template>
   <article class="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-    <header class="nv-title pt-6 text-center space-y-1 xl:pb-10">
+    <header class="pt-6 text-center space-y-1 xl:pb-10">
       <StarterDate :date="frontmatter.date" />
       <h1
-        class="st-text text-3xl font-extrabold leading-9 tracking-tight md:text-5xl sm:text-4xl md:leading-14 sm:leading-10"
+        class="nv-title st-text text-3xl font-extrabold leading-9 tracking-tight md:text-5xl sm:text-4xl md:leading-14 sm:leading-10"
       >
         {{ frontmatter.title }}
       </h1>

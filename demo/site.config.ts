@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Valaxy Theme Novel',
-  subtitle: 'Valaxy Theme Novel Preview',
+  subtitle: '以愚者之名攀上顶峰',
   url: 'https://novel.valaxy.site/',
   favicon: 'https://afool.top/afool.svg',
   author: {
