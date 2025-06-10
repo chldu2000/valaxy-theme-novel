@@ -27,7 +27,7 @@ jobs:
         run: pnpm run build
 
       - name: Build Demo
-        run: pnpm run build:demo -- --base-href=/valaxy-theme-novel/
+        run: pnpm run build:demo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
