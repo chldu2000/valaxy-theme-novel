@@ -24,7 +24,7 @@ export default defineConfig<ThemeConfig>({
         },
         {
           text: 'RSS',
-          link: 'https://novel.valaxy.site/atom.xml',
+          link: 'https://chldu2000.github.io/valaxy-theme-novel/atom.xml',
           icon: 'i-ri-rss-line',
         },
         // {

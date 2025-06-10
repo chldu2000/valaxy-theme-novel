@@ -4,7 +4,7 @@ export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Valaxy Theme Novel',
   subtitle: 'Priview Site of Valaxy Theme Novel',
-  url: 'https://novel.valaxy.site/',
+  url: 'https://chldu2000.github.io/valaxy-theme-novel/',
   favicon: 'https://afool.top/afool.svg',
   author: {
     // avatar: 'https://www.yunyoujun.cn/images/avatar.jpg',
