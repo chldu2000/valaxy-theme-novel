@@ -17,8 +17,8 @@ const navConfig = useThemeConfig().value.nav
 <template>
   <nav w="full" class="flex items-center justify-between py-4 font-bold">
     <RouterLink class="text-xl" to="/" :aria-label="siteConfig.title">
-      <img class="mr-2 inline-block" style="width: 50px; height: 35px" alt="logo" :src="siteConfig.favicon">
-      <span class="nv-title hidden font-bold md:inline">{{ siteConfig.title }}</span>
+      <img v-if="navConfig.showIcon" class="mr-2 inline-block" style="width: 50px; height: 35px" alt="logo" :src="siteConfig.favicon">
+      <span v-if="navConfig.showTitle" class="nv-title hidden font-bold md:inline">{{ siteConfig.title }}</span>
     </RouterLink>
 
     <div class="flex space-x-8">

@@ -30,42 +30,45 @@ const prevPost = computed(() => posts.value[findCurrentIndex() + 1])
 
     <div
       class="pb-16 xl:grid xl:grid-cols-4 xl:gap-x-10 divide-y divide-gray-200 xl:pb-20 xl:divide-y-0 dark:divide-gray-700"
-      style="grid-template-rows: auto 1fr"
+      style="grid-template-rows: fixed 1fr"
     >
-      <StarterAuthor v-if="frontmatter.author" :frontmatter="frontmatter" />
+      <aside>
+        <NovelArticleSidebar :frontmatter="frontmatter" />
+      </aside>
+
       <div class="xl:col-span-3 xl:row-span-2 divide-y divide-gray-200 xl:pb-0 dark:divide-gray-700">
         <slot />
       </div>
+    </div>
 
-      <footer
-        class="text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 divide-y divide-gray-200 dark:divide-gray-700"
-      >
-        <div v-if="nextPost && nextPost.path" class="py-8">
-          <h2 class="text-xs text-gray-500 tracking-wide uppercase">
-            Next Article
-          </h2>
-          <div class="link">
-            <RouterLink :to="nextPost.path">
-              {{ nextPost.title }}
-            </RouterLink>
-          </div>
-        </div>
-        <div v-if="prevPost && prevPost.path" class="py-8">
-          <h2 class="text-xs text-gray-500 tracking-wide uppercase">
-            Previous Article
-          </h2>
-          <div class="link">
-            <RouterLink :to="prevPost.path">
-              {{ prevPost.title }}
-            </RouterLink>
-          </div>
-        </div>
-        <div class="pt-8">
-          <RouterLink class="link" to="/">
-            ← Back to the blog
+    <footer
+      class="text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 divide-y divide-gray-200 dark:divide-gray-700"
+    >
+      <div v-if="nextPost && nextPost.path" class="py-8">
+        <h2 class="text-xs text-gray-500 tracking-wide uppercase">
+          Next Article
+        </h2>
+        <div class="link">
+          <RouterLink :to="nextPost.path">
+            {{ nextPost.title }}
           </RouterLink>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div v-if="prevPost && prevPost.path" class="py-8">
+        <h2 class="text-xs text-gray-500 tracking-wide uppercase">
+          Previous Article
+        </h2>
+        <div class="link">
+          <RouterLink :to="prevPost.path">
+            {{ prevPost.title }}
+          </RouterLink>
+        </div>
+      </div>
+      <div class="pt-8">
+        <RouterLink class="link" to="/">
+          ← Back to the blog
+        </RouterLink>
+      </div>
+    </footer>
   </article>
 </template>

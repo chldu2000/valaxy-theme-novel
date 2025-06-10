@@ -26,7 +26,7 @@ onUpdated(() => {
     <div
       id="novel-nav"
       ref="navBar"
-      class="fixed left-0 right-0 top-0 z-50 border-b-4 border-dotted"
+      class="fixed left-0 right-0 top-0 z-50 border-b-2 border-dashed"
     >
       <div class="mx-auto max-w-3xl px-4 xl:max-w-5xl sm:px-6 xl:px-0">
         <NovelNav />

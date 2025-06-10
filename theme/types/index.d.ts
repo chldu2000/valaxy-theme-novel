@@ -11,7 +11,6 @@ export interface ThemeConfig extends DefaultTheme.Config {
   colors: {
     /**
      * primary color
-     * @default '#0078E7'
      */
     primary: string
   }

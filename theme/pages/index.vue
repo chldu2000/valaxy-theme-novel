@@ -1,5 +1,5 @@
 <template>
-  <StarterPostList />
+  <NovelPostList />
 </template>
 
 <route lang="yaml">

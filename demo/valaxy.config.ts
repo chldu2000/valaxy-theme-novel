@@ -10,12 +10,12 @@ export default defineConfig<ThemeConfig>({
 
   themeConfig: {
     // colors: {
-    //   primary: '${nv-c-brand}',
+    //   primary: '#2aa198',
     // },
 
     nav: {
       showIcon: true,
-      showTitle: true,
+      showTitle: false,
       items: [
         {
           text: 'GitHub',
@@ -34,6 +34,10 @@ export default defineConfig<ThemeConfig>({
         {
           text: 'Valaxy',
           link: 'https://valaxy.site',
+        },
+        {
+          text: 'test-404',
+          link: '/404',
         },
       ],
     },

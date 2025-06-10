@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import type { Post } from 'valaxy'
+import { useSiteConfig } from 'valaxy'
 
 defineProps<{
   frontmatter: Post
 }>()
+
+const siteConfig = useSiteConfig()
 </script>
 
 <template>
-  <dl class="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11">
+  <dl v-if="frontmatter.author" class="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11">
     <dt class="sr-only">
       Authors
     </dt>
@@ -43,6 +46,14 @@ defineProps<{
           </dl>
         </li>
       </ul>
+    </dd>
+  </dl>
+  <dl v-else class="whitespace-nowrap text-sm font-medium leading-5">
+    <dt class="sr-only">
+      Name
+    </dt>
+    <dd class="st-text">
+      {{ siteConfig.author.name }}
     </dd>
   </dl>
 </template>
