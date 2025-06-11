@@ -10,12 +10,12 @@ export default defineConfig<ThemeConfig>({
 
   themeConfig: {
     // colors: {
-    //   primary: '#2aa198',
+    //   primary: '#268bd2',
     // },
 
     nav: {
       showIcon: true,
-      showTitle: false,
+      showTitle: true,
       items: [
         {
           text: 'GitHub',
@@ -42,15 +42,15 @@ export default defineConfig<ThemeConfig>({
       ],
     },
 
-    footer: {
-      since: 2020,
-      icon: {
-        name: 'i-ri-book-open-line',
-        animated: true,
-        color: 'var(--nv-c-brand)',
-        url: 'https://afool.top/',
-        title: 'A url, now lead you to my site',
-      },
-    },
+    // footer: {
+    //   since: 2020,
+    //   icon: {
+    //     name: 'i-ri-book-open-line',
+    //     animated: true,
+    //     color: '#268bd2',
+    //     url: 'https://afool.top/',
+    //     title: 'A url, now lead you to my site',
+    //   },
+    // },
   },
 })

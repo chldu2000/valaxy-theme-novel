@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { useFrontmatter, usePostList } from 'valaxy'
 import { computed } from 'vue'
-
 import { useRoute } from 'vue-router'
+
+import { useThemeConfig } from '../composables'
 
 const frontmatter = useFrontmatter()
 
 const route = useRoute()
 const posts = usePostList()
+
+const themeConfig = useThemeConfig()
 
 function findCurrentIndex() {
   return posts.value.findIndex(p => p.path === route.path)
@@ -49,7 +52,7 @@ const prevPost = computed(() => posts.value[findCurrentIndex() + 1])
           Next Article
         </h2>
         <div class="link">
-          <RouterLink :to="nextPost.path">
+          <RouterLink :to="nextPost.path" :style="{ color: themeConfig.colors.primary }">
             {{ nextPost.title }}
           </RouterLink>
         </div>
@@ -59,13 +62,13 @@ const prevPost = computed(() => posts.value[findCurrentIndex() + 1])
           Previous Article
         </h2>
         <div class="link">
-          <RouterLink :to="prevPost.path">
+          <RouterLink :to="prevPost.path" :style="{ color: themeConfig.colors.primary }">
             {{ prevPost.title }}
           </RouterLink>
         </div>
       </div>
       <div class="pt-8">
-        <RouterLink class="link" to="/">
+        <RouterLink class="link" to="/" :style="{ color: themeConfig.colors.primary }">
           ← Back to the blog
         </RouterLink>
       </div>

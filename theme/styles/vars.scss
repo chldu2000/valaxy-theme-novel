@@ -3,14 +3,14 @@
 @use 'novel-vars';
 
 // common
-$common: () !default;
+$common: (
+  'c-brand': solar-vars.$solar-cyan,
+  'c-link': solar-vars.$solar-blue,
+) !default;
 $common: map.merge((), $common);
 
 // palette
 $light: (
-  'c-brand': solar-vars.$solar-cyan,
-  'c-link': 'var(--nv-c-brand)',
-
   'c-text': novel-vars.$text-light,
   'c-bg': novel-vars.$bg-light,
 ) !default;

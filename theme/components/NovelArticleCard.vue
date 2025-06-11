@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import type { Post } from 'valaxy'
+import { useThemeConfig } from '../composables'
 
 defineProps<{
   post: Post
 }>()
+
+const themeConfig = useThemeConfig()
 </script>
 
 <template>
@@ -23,7 +26,7 @@ defineProps<{
         />
       </div>
       <div class="text-base font-medium leading-6">
-        <RouterLink class="link" aria-label="read more" :to="post.path || ''">
+        <RouterLink class="link" aria-label="read more" :to="post.path || ''" :style="{ color: themeConfig.colors.primary }">
           Read more →
         </RouterLink>
       </div>

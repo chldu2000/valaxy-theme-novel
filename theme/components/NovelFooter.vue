@@ -18,7 +18,8 @@ const isThisYear = computed(() => {
   return year === themeConfig.value.footer.since
 })
 
-const poweredHtml = computed(() => t('footer.powered', [`<a href="${pkg.repository}" target="_blank" rel="noopener">Valaxy</a> v${pkg.version}`]))
+const valaxyRepo = pkg.repository.url
+const valaxyVersion = pkg.version
 const footerIcon = computed(() => themeConfig.value.footer.icon!)
 </script>
 
@@ -40,14 +41,14 @@ const footerIcon = computed(() => themeConfig.value.footer.icon!)
       </span>
 
       <a m="x-2" class="inline-flex animate-pulse" :href="footerIcon.url" target="_blank" :title="footerIcon.title">
-        <div :class="footerIcon.name" />
+        <div :class="footerIcon.name" :style="{ color: footerIcon.color }" />
       </a>
 
       <span>{{ siteConfig.author.name }}</span>
     </div>
 
     <div v-if="themeConfig.footer.powered" class="powered" m="2">
-      <span v-html="poweredHtml" /> | <span>{{ t('footer.theme') }} - <a :href="themeConfig.pkg.homepage" :title="`valaxy-theme-${config.theme}`" target="_blank">{{ capitalize(config.theme) }}</a> v{{ themeConfig.pkg.version }}</span>
+      <a :href="valaxyRepo" :style="{ color: themeConfig.colors.primary }" target="_blank" rel="noopener">Valaxy</a> v<span>{{ valaxyVersion }}</span> | <span>{{ t('footer.theme') }} - <a :href="themeConfig.pkg.homepage" :title="`valaxy-theme-${config.theme}`" :style="{ color: themeConfig.colors.primary }" target="_blank">{{ capitalize(config.theme) }}</a> v{{ themeConfig.pkg.version }}</span>
     </div>
 
     <slot />

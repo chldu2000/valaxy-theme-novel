@@ -10,7 +10,7 @@
 @use './solar-vars.scss' as *;
 
 .markdown-body {
-  --c-toc-link: var('--nv-c-brand');
+  // --c-toc-link: var('--nv-c-link');
   background-color: $bg-light; // 纸质背景色
   color: $text-light; // 文字颜色
   padding-top: 0.5rem;
