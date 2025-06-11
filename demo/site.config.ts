@@ -4,11 +4,11 @@ export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Valaxy Theme Novel',
   subtitle: 'Priview Site of Valaxy Theme Novel',
-  url: 'https://chldu2000.github.io/valaxy-theme-novel/',
+  url: 'https://afool.top/valaxy-theme-novel/',
   favicon: 'https://afool.top/afool.svg',
   author: {
     // avatar: 'https://www.yunyoujun.cn/images/avatar.jpg',
-    name: 'chldu/空游',
+    name: 'LooHeir',
   },
   description: 'Valaxy Theme Novel Preview.',
   social: [

@@ -19,12 +19,12 @@ export default defineConfig<ThemeConfig>({
       items: [
         {
           text: 'GitHub',
-          link: 'https://github.com/chldu2000/valaxy-theme-novel',
+          link: 'https://github.com/LooHeir/valaxy-theme-novel',
           icon: 'i-ri-github-line',
         },
         {
           text: 'RSS',
-          link: 'https://chldu2000.github.io/valaxy-theme-novel/atom.xml',
+          link: 'https://afool.top/valaxy-theme-novel/atom.xml',
           icon: 'i-ri-rss-line',
         },
         // {
@@ -42,15 +42,15 @@ export default defineConfig<ThemeConfig>({
       ],
     },
 
-    // footer: {
-    //   since: 2020,
-    //   icon: {
-    //     name: 'i-ri-book-open-line',
-    //     animated: true,
-    //     color: '#268bd2',
-    //     url: 'https://afool.top/',
-    //     title: 'A url, now lead you to my site',
-    //   },
-    // },
+    footer: {
+      since: 2020,
+      icon: {
+        name: 'i-ri-book-open-line',
+        animated: true,
+        color: '#2aa198',
+        url: 'https://afool.top/',
+        title: 'A url, now lead you to my site',
+      },
+    },
   },
 })
